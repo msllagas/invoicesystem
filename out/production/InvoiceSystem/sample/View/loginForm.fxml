@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="650.0" style="-fx-background-color: #017eec;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.LoginController">
+   <children>
+      <ImageView fitHeight="136.0" fitWidth="161.0" layoutX="42.0" layoutY="79.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/3-38813_wedding-dress-clipart-wedding-dress-silhouette-png-transparent.png" />
+         </image>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.47826087474823" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Button fx:id="buttonExit" layoutX="601.0" layoutY="14.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="35.0" style="-fx-background-color: #134573;" text="X" textFill="#dbe3ea">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label layoutX="71.0" layoutY="297.0" text="/jjmcbridalgown" textFill="#e6f5f5" />
+      <AnchorPane layoutX="389.0" layoutY="57.0" prefHeight="257.0" prefWidth="221.0" style="-fx-background-color: #feffff;">
+         <children>
+            <TextField fx:id="fieldAdmin" layoutX="23.0" layoutY="72.0" prefHeight="25.0" prefWidth="175.0" promptText="Username" style="-fx-background-color: #f0f1f6;" />
+            <Label layoutX="23.0" layoutY="55.0" text="Admin" />
+            <PasswordField fx:id="fieldPassword" layoutX="23.0" layoutY="136.0" prefHeight="25.0" prefWidth="175.0" promptText="Password" style="-fx-background-color: #f0f1f6;" />
+            <Label layoutX="23.0" layoutY="120.0" text="Password" />
+            <Button fx:id="buttonLogin" layoutX="23.0" layoutY="195.0" mnemonicParsing="false" onMouseEntered="#menuContainer" onMouseExited="#menuOut" prefHeight="30.0" prefWidth="175.0" style="-fx-background-color: #0066c8;" text="LOGIN" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Label fx:id="labelMessage" alignment="CENTER" layoutX="12.0" layoutY="167.0" prefHeight="17.0" prefWidth="198.0" textAlignment="CENTER" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Label layoutX="89.0" layoutY="14.0" text="Login">
+               <font>
+                  <Font name="Modern No. 20" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow offsetY="2.0">
+               <color>
+                  <Color red="0.16812865436077118" green="0.25426414608955383" blue="0.31578946113586426" />
+               </color>
+            </DropShadow>
+         </effect>
+      </AnchorPane>
+      <ImageView fitHeight="25.0" fitWidth="44.0" layoutX="35.0" layoutY="293.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Assets/fblogo.png" />
+         </image>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color opacity="0.365217387676239" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ImageView>
+      <Label layoutX="222.0" layoutY="85.0" prefHeight="61.0" prefWidth="74.0" text="JJMC" textFill="WHITE">
+         <font>
+            <Font name="Modern No. 20" size="29.0" />
+         </font>
+      </Label>
+      <Label layoutX="186.0" layoutY="131.0" prefHeight="31.0" prefWidth="147.0" text="Barong and Gown Shop" textFill="WHITE">
+         <font>
+            <Font name="Modern No. 20" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="800.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.TableController">
+   <left>
+      <VBox prefHeight="334.0" prefWidth="200.0" style="-fx-background-color: #ebe8f9;" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#addData" prefHeight="34.0" prefWidth="117.0" text="Add">
+               <VBox.margin>
+                  <Insets left="40.0" right="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnShowInfo" layoutX="50.0" layoutY="30.0" mnemonicParsing="false" onAction="#showInfo" prefHeight="34.0" prefWidth="117.0" text="Show Information">
+               <VBox.margin>
+                  <Insets left="40.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="btnLogout" mnemonicParsing="false" onAction="#logout" prefHeight="25.0" prefWidth="126.0" style="-fx-background-color: red;" text="Log out" textFill="WHITE">
+               <VBox.margin>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="150.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <AnchorPane prefHeight="0.0" prefWidth="700.0" style="-fx-background-color: #ffffff;" BorderPane.alignment="CENTER">
+         <children>
+            <AnchorPane layoutY="-1.0" prefHeight="117.0" prefWidth="200.0" style="-fx-background-color: #ebe8f9;">
+               <children>
+                  <ImageView fitHeight="120.0" fitWidth="104.0" layoutX="48.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Assets/image-removebg-preview.png" />
+                     </image>
+                     <effect>
+                        <DropShadow>
+                           <color>
+                              <Color opacity="0.343478262424469" />
+                           </color>
+                        </DropShadow>
+                     </effect>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="228.0" layoutY="12.0" text="Shop Orders">
+               <font>
+                  <Font name="Modern No. 20" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalCustomers" alignment="CENTER" layoutX="251.0" layoutY="50.0" prefHeight="30.0" prefWidth="94.0" textFill="#3700ff">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="234.0" layoutY="82.0" prefHeight="17.0" prefWidth="128.0" text="Total Customers">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblProductSold" alignment="CENTER" layoutX="430.0" layoutY="50.0" prefHeight="30.0" prefWidth="76.0" textFill="#bf0707">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="404.0" layoutY="80.0" prefHeight="17.0" prefWidth="128.0" text="Products sold">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotalAmount" alignment="CENTER" layoutX="586.0" layoutY="50.0" prefHeight="30.0" prefWidth="112.0" textFill="#0e5e17">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="578.0" layoutY="80.0" prefHeight="17.0" prefWidth="128.0" text="Total Amount">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <TextField fx:id="tfSearch" layoutX="578.0" layoutY="15.0" promptText="Search customer..." />
+            <Button fx:id="btnSearch" layoutX="732.0" layoutY="15.0" mnemonicParsing="false" onAction="#searchCustomer" prefHeight="25.0" prefWidth="54.0" text="Search" />
+         </children>
+      </AnchorPane>
+   </top>
+   <center>
+      <TableView fx:id="tvInvoice" prefHeight="334.0" prefWidth="579.0" style="-fx-background-color: #ffffff; -fx-border-color: #ebe8f9;" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="colInvoiceNumber" prefWidth="112.0" resizable="false" sortable="false" text="Invoice Number" />
+          <TableColumn fx:id="colOrderDate" editable="false" prefWidth="91.0" sortable="false" styleClass="a" text="Order Date" />
+            <TableColumn fx:id="colCustomerID" editable="false" prefWidth="104.0" resizable="false" sortable="false" text="Customer ID" />
+            <TableColumn fx:id="colCustomerName" prefWidth="143.0" sortable="false" text="Customer Name" />
+            <TableColumn fx:id="colCustomerAddress" editable="false" prefWidth="143.0" sortable="false" text="Customer Address" />
+            <TableColumn fx:id="colCustomerTINNo" editable="false" prefWidth="143.0" sortable="false" text="Customer TIN Number" />
+            <TableColumn fx:id="colCustomerPWDNo" editable="false" prefWidth="143.0" sortable="false" text="Customer PWD Number" />
+            <TableColumn fx:id="colProductID" editable="false" prefWidth="143.0" resizable="false" sortable="false" text="Product ID" />
+            <TableColumn fx:id="colProductDesc" editable="false" prefWidth="143.0" sortable="false" text="Product Description" />
+            <TableColumn fx:id="colFabricType" editable="false" prefWidth="143.0" resizable="false" sortable="false" text="Fabric Type" />
+            <TableColumn fx:id="colOrderQuantity" editable="false" prefWidth="143.0" resizable="false" sortable="false" text="Order Quantity" />
+            <TableColumn fx:id="colUnitMeasure" editable="false" prefWidth="143.0" resizable="false" sortable="false" text="Unit Measure" />
+            <TableColumn fx:id="colUnitPrice" editable="false" prefWidth="143.0" resizable="false" sortable="false" text="Unit Price" />
+            <TableColumn fx:id="colTermsCode" editable="false" prefWidth="143.0" resizable="false" sortable="false" text="Terms Code" />
+            <TableColumn fx:id="colTermsDesc" editable="false" prefWidth="143.0" sortable="false" text="Terms Description" />
+        </columns>
+         <BorderPane.margin>
+            <Insets bottom="12.0" left="12.0" right="12.0" />
+         </BorderPane.margin>
+      </TableView>
+   </center>
+</BorderPane>
